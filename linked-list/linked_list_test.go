@@ -3,14 +3,13 @@ package linked_list
 import "testing"
 
 func TestLinkedList(t *testing.T) {
+
 	linkedList := &LinkedList{}
 
-	// Arrange
 	linkedList.InsertBeginning(2)
 	linkedList.InsertEnd(6)
 	_ = linkedList.Insert(2, 4)
 
-	// Subtest for size
 	t.Run("Check LinkedList size", func(t *testing.T) {
 		want := 3
 		got := linkedList.size

@@ -1,4 +1,4 @@
-package stack
+package stacks
 
 import "fmt"
 
@@ -34,7 +34,7 @@ func (stack *Stack) Size() uint {
 func (stack *Stack) Push(data interface{}) error {
 
 	if stack.IsFull() {
-		return fmt.Errorf("stack overflow")
+		return fmt.Errorf("stacks overflow")
 	}
 
 	stack.top++
@@ -46,7 +46,7 @@ func (stack *Stack) Push(data interface{}) error {
 func (stack *Stack) Pop() (interface{}, error) {
 
 	if stack.IsEmpty() {
-		return nil, fmt.Errorf("stack is empty")
+		return nil, fmt.Errorf("stacks is empty")
 	}
 	data := stack.array[stack.top]
 	stack.top--
@@ -57,7 +57,7 @@ func (stack *Stack) Pop() (interface{}, error) {
 
 func (stack *Stack) Peek() (interface{}, error) {
 	if stack.IsEmpty() {
-		return nil, fmt.Errorf("stack is empty")
+		return nil, fmt.Errorf("stacks is empty")
 	}
 	data := stack.array[stack.top]
 

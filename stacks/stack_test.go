@@ -1,4 +1,4 @@
-package stack
+package stacks
 
 import (
 	"testing"
@@ -8,7 +8,7 @@ func TestStack(t *testing.T) {
 
 	stack := NewStack(5)
 
-	t.Run("check if a stack is empty", func(t *testing.T) {
+	t.Run("check if a stacks is empty", func(t *testing.T) {
 
 		got := stack.IsEmpty()
 
@@ -17,7 +17,7 @@ func TestStack(t *testing.T) {
 		}
 	})
 
-	t.Run("should be able to push elements into stack that is not full", func(t *testing.T) {
+	t.Run("should be able to push elements into stacks that is not full", func(t *testing.T) {
 
 		err := stack.Push(2)
 
@@ -33,11 +33,11 @@ func TestStack(t *testing.T) {
 		}
 
 		if stack.top != 0 {
-			t.Errorf("check index: the index of the first element inserted into stack should be 0 but got %d", stack.top)
+			t.Errorf("check index: the index of the first element inserted into stacks should be 0 but got %d", stack.top)
 		}
 	})
 
-	t.Run("should be able to pop elements from stack", func(t *testing.T) {
+	t.Run("should be able to pop elements from stacks", func(t *testing.T) {
 
 		err := stack.Push(2)
 

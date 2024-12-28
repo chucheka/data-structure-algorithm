@@ -1,4 +1,4 @@
-package stack
+package stacks
 
 import (
 	"errors"
@@ -44,7 +44,7 @@ func (stack *LlStack) Push(data interface{}) {
 func (stack *LlStack) Pop() (interface{}, error) {
 
 	if stack.IsEmpty() {
-		return nil, errors.New("stack is empty")
+		return nil, errors.New("stacks is empty")
 	}
 
 	data := stack.top.data
@@ -57,7 +57,7 @@ func (stack *LlStack) Pop() (interface{}, error) {
 
 func (stack *LlStack) Peek() (interface{}, error) {
 	if stack.IsEmpty() {
-		return nil, fmt.Errorf("stack is empty")
+		return nil, fmt.Errorf("stacks is empty")
 	}
 	data := stack.top.data
 	return data, nil

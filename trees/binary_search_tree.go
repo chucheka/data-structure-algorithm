@@ -72,3 +72,19 @@ func (bst *BinarySearchTree) Contain(data int) bool {
 	}
 
 }
+
+//func (bst *BinarySearchTree) BreadthFirstSearch() []int {
+//
+//	currentNode := bst.root
+//
+//	queue := &queues.LlQueue{}
+//
+//	queue.Enqueue()
+//
+//	result := []int{}
+//
+//	for queue.Size() > 0 {
+//
+//	}
+//
+//}
